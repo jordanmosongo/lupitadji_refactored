@@ -1,0 +1,55 @@
+.contact{
+    height: 45rem;
+    background-color: #d92950;
+}
+.contact h2{
+    color: #ffffff;
+}
+.contact .container {
+    display: flex;
+}
+.appel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icone .icone-text {
+   color: #ffffff; 
+   position: relative;  
+   left: 80px;
+   font-size: 2.5em;
+}
+.icone-text a{
+    color: #ffffff;
+}
+
+img {
+    width: 50%;
+}
+.formulaire {
+    height: 35rem;
+    display: flex;
+    justify-content: flex-end ;
+}
+.formulaire form{
+    background-color: #ffffff;
+    width: 70%;
+    height: 100%;
+    padding: 5%;
+}
+form h3{
+    color: #006674;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+}
+form input, form textarea{
+    color: #a7a9ad;
+    margin-bottom: 10px;
+}
+form button{
+    background-color: #006674;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+

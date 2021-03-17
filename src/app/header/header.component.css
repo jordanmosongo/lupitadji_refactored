@@ -1,0 +1,57 @@
+.navigation {
+    height: 5.5rem;
+    background-color: #ffffff;  
+    position: fixed;  
+    z-index: 1;
+  }
+.container{
+    width: 60%;
+}
+#logo-container{
+    color: #e80041;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.navigation img{
+    width: 40%;
+    position: relative;
+    top: .8rem;
+}
+.right a{
+    color: #006674;
+    text-transform: uppercase;
+    text-decoration: none; 
+    font-size: 16px;
+    position: relative;  
+}
+.right a::after{
+    content: '';
+    width: 0;
+    border-bottom: 2px solid #e80041;
+    height: 2px;
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    transition: width .3s ease;
+}
+.right a:hover{
+    background-color: inherit;
+}
+.right a:hover::after{
+    
+    width: 75%;
+}
+#log-in{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #006674;
+    color: white;
+    margin-right: 20px;
+}
+#log-in:hover{
+    border: 2px solid#006674;
+    color: #006674;
+    background-color: #ffffff;
+    margin-right: 20px;
+}

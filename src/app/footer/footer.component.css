@@ -1,0 +1,25 @@
+footer {
+    background-color: #0f0f0f;
+}
+.footer-copyright p {
+    text-align: center;
+}
+footer .lupitadji{
+    color: #ffffff;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    padding-left: 20px;
+}
+footer p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #ffffffed;
+}
+footer ul{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ffffffde;
+}
+.developer{
+    font-size: 15px !important;
+}

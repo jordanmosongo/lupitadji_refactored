@@ -1,0 +1,17 @@
+.localisation {
+    height: 45rem;
+    }
+.localisation h2{
+    color: #006674;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 1em;
+}
+#mapid 
+{ 
+    height: 90%; 
+    margin-bottom: 0;
+    z-index: 0;
+}
+.modal-pop{
+    color: red;
+}

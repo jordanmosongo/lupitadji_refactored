@@ -1,0 +1,54 @@
+.liste{
+    height: 30rem;
+    background-color: #c70040;
+    color: #ffffffde;
+    
+}
+.liste .col{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.hopitaux-liste{
+    width: 210%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.hopitaux-liste > div {
+    width: 20%;
+    animation: slide-hopital 12s ease 2s infinite;
+}
+@keyframes slide-hopital{
+    0% {
+        position: relative;
+        left: 0;
+     
+    }    
+    10% {
+        position: relative;
+        left: -10%;
+    }
+    20% {
+        position: relative;
+        left: -10%;
+    }
+    30% {
+        position: relative;
+        left: -20%;
+    }
+    40% {
+        position: relative;
+        left: -20%;
+    }
+    50% {
+        position: relative;
+        left: -30%;
+    }
+    60% {
+        position: relative;
+        left: -30%;
+    }
+    70% {
+        position: relative;
+        left: -40%;
+    }
+}

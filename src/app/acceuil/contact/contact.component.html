@@ -1,0 +1,40 @@
+<section class="contact valign-wrapper">
+    
+        <div class="row container">            
+           <div class="col s12 m6 appel">              
+                <div class="icone valign-wrapper" data-aos-easing="ease-in-out"
+                 data-aos="fade-right" data-aos-duration="1200">
+                    <img [src]="contact_image" alt="logo contact">
+                    <div class="icone-text">
+                        <p>Nous sommes à votre écoute</p>
+                        <a href="tel:+243812345678">+243812345678</a>
+                    </div>
+                </div>
+                
+           </div>
+           <div class="col s12 m6 formulaire" data-aos-duration="1200"
+           data-aos="zoom-in" data-aos-easing="ease-in-out">               
+               <form [formGroup] = "contact_form" (ngSubmit) = "onSend()" class="z-index-3">
+                   <h3>Laissez-nous un message</h3>
+                    <div class="form-control">
+                        <input type="text" placeholder="Nom complet" name="fullname"
+                        formControlName = "fullname">
+                    </div>
+                    <div class="form-control">
+                        <input type="email" placeholder="Email" name="email"
+                        formControlName = "email">
+                    </div>
+                    <div class="form-control">
+                        <input type="tel" placeholder="Téléphone" name="phone"
+                        formControlName = "phone">
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Votre message</label>
+                        <textarea name="message"></textarea>
+                    </div>
+                    <button class="btn-large">Envoyer</button>
+               </form>
+           </div>
+        </div>
+  
+</section>
