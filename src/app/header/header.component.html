@@ -4,12 +4,12 @@
         lupitadji
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Acceuil</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Géo-localisation</a></li>
-        <li><a href="#">Faq</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><button class="btn-large hoverable" id="log-in" >connexion</button></li>
+        <li><a href="#" class="link">Acceuil</a></li>
+        <li><a href="#" class="link">Services</a></li>
+        <li><a href="#" class="link">Géo-localisation</a></li>
+        <li><a href="#" class="link">Faq</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+        <li><a href="#login" class="btn-large modal-trigger" id="log-in" ><i class="material-icons">perm_identity</i>log in</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Acceuil</a></li>
@@ -21,3 +21,59 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
+<!-- Modal pour la page d'authentification -->
+<div id="login" class="modal">
+  <div class="modal-content">      
+      <h2>Votre espace hôpital
+          <a class="modal-close right"><i class="material-icons">close</i></a>
+      </h2>
+      <form [formGroup] = "loginForm">
+        <div class="input-field">
+          <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+        </div>        
+        <div class="input-field">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+          <a href="">Mot de passe oublié ?</a>
+          <a href="#signup" class="right modal-trigger" (click) = "create()">Je n'ai pas de compte</a>
+        </div>
+        <button class="btn-large">log in</button>
+      </form>
+     
+  </div> 
+</div>
+<!-- Modal pour signup -->
+<div id="signup" class="modal">
+  <div class="modal-content">      
+      <h2>Créer un espace hôpital
+          <a href="" class="modal-close right"><i class="material-icons">close</i></a>
+      </h2>
+      <form [formGroup] = "signupForm" (ngSubmit) = "onCreate()">
+        <div class="input-field">
+          <input id="matricule" type="text" class="validate" formControlName = "matricule">
+          <label for="matricule">Matricule de l'hôpital</label>
+        </div> 
+        <div class="input-field">
+          <input id="nom" type="text" class="validate" formControlName = "nom">
+          <label for="nom">Nom de l'hôpital</label>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email" class="validate" formControlName="email"> 
+            <label for="email">Email</label>
+        </div>        
+        <div class="input-field">
+          <input id="password" type="password" class="validate" formControlName = "password">
+          <label for="password">Mot de passe</label>
+        </div>
+        <div class="input-field">
+          <input id="confirmpassword" type="password" class="validate" formControlName = "confirmPassword">
+          <label for="confirmpassword">Confirmer le mot de passe</label>
+        </div>
+        <button class="btn-large">Créer</button>
+      </form>
+     
+  </div> 
+</div>

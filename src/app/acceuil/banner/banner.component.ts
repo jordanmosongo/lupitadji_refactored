@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $ : any;
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  image_barner = "assets/images-appli/15.jpg";
+  image_barner = "assets/images-appli/stetoscope.jpeg";
   hoverState = false;
   constructor() { }
 
   ngOnInit(): void {
+    $('.modal').modal();
   }
   onHover(){
     this.hoverState = !this.hoverState;

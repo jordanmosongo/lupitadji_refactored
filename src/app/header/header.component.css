@@ -18,24 +18,27 @@
     position: relative;
     top: .8rem;
 }
-.right a{
+.right{
+    padding-top: 15px;
+}
+.right .link{
     color: #006674;
     text-transform: uppercase;
     text-decoration: none; 
     font-size: 16px;
     position: relative;  
 }
-.right a::after{
+.right .link::after{
     content: '';
     width: 0;
-    border-bottom: 2px solid #e80041;
-    height: 2px;
+    border-bottom: 4px solid #e80041;
+    height: 10px;
     position: absolute;
-    left: 15%;
+    left: 10%;
     bottom: 0;
     transition: width .3s ease;
 }
-.right a:hover{
+.right .link:hover{
     background-color: inherit;
 }
 .right a:hover::after{
@@ -48,10 +51,47 @@
     background-color: #006674;
     color: white;
     margin-right: 20px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
 }
 #log-in:hover{
     border: 2px solid#006674;
     color: #006674;
     background-color: #ffffff;
-    margin-right: 20px;
+}
+.modal {
+    width: 40%;
+    padding: 20px;
+}
+.modal .row{
+    padding: 20px;
+}
+.modal h2{
+    margin-bottom: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    color: #006674;
+}
+.modal .modal-close{
+    color: #e80041;
+    font-size: 20px;
+}
+.modal a{
+    color: #006674;
+    cursor: pointer;
+}
+.modal a:hover{
+    text-decoration: underline;
+}
+.modal .btn-large{
+    background-color: #ffffff;
+    color: #e80041;
+    border: 2px solid #e80041;
+    font-family: "Roboto", sans-serif;
+}
+.modal .btn-large:hover{
+    background-color: #e80041;
+    color: #ffffff;
 }

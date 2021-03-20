@@ -1,0 +1,51 @@
+
+<a class="btn-large modal-trigger btn-add" href="#ajout-service"><i class="material-icons">add_circle</i>Ajouter</a>
+<table *ngFor="let service of services; let i = index">
+    <tr class="ligne z-depth-1">
+        <td>{{service}} 
+            <hr>
+            <span class="description">Un texte descriptif du service</span>
+            <ul class="action">
+                <li><a href="#ajout-service" class="modal-trigger"><i class="material-icons edit hoverable">edit</i></a></li>
+                <li><a href="#confirmation" class="modal-trigger"><i class="material-icons delete hoverable">delete</i></a></li>
+            </ul>
+        </td>        
+    </tr>      
+</table>
+
+<!-- Modal d'ajout de service ou modification -->
+<div id="ajout-service" class="modal">
+    <div class="modal-content">
+        <h4 *ngIf="editing == false">Ajouter un service 
+            <a class="modal-close waves-effect waves-red btn-flat fermer">
+                <i class="material-icons">close</i>
+            </a>
+        </h4>
+        <h4 *ngIf="editing == true">Mise à jour</h4>
+        <form [formGroup] = "serviceForm" (ngSubmit) = "onSend()">
+            <div class="form-group">
+                <div class="form-control">
+                    <label for="nom">Nom</label>
+                    <input type="text" class="form-control" formControlName = "nom" placeholder="Veuillez saisir le nom du service">
+                </div>
+                <div class="form-control">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" formControlName = "description"
+                    placeholder="Veuillez donner une briève description">
+                </div>
+            </div>
+            <button class="btn-large" type="submit">Ajouter</button>
+        </form>
+    </div>
+  
+</div>
+<!-- Modal de demande de confirmation pour supprimer un service -->
+<div id="confirmation" class="modal">
+    <div class="modal-content">
+        <h4>Etes-vous sûr de vouloir supprimer ce service ?</h4>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect btn-flat">Oui</a>
+        <a class="modal-close waves-effect btn-flat">Non</a>
+    </div>
+</div>

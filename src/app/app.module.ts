@@ -15,6 +15,14 @@ import { ContactComponent } from './acceuil/contact/contact.component';
 import { ListeComponent } from './acceuil/liste/liste.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { HopitalComponent } from './hopital/hopital.component';
+import { ServicesComponent } from './hopital/services/services.component';
+import { ProfilComponent } from './hopital/profil/profil.component';
+import { AdminComponent } from './admin/admin.component';
+import { ValidatedHospitalComponent } from './admin/validated-hospital/validated-hospital.component';
+import { NonValidatedHospitalComponent } from './admin/non-validated-hospital/non-validated-hospital.component';
+import { SuspendedHospitalComponent } from './admin/suspended-hospital/suspended-hospital.component';
+import { AllServiceComponent } from './admin/all-service/all-service.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     LocalisationComponent,
     FaqComponent,
     ContactComponent,
-    ListeComponent
+    ListeComponent,
+    HopitalComponent,
+    ServicesComponent,
+    ProfilComponent,
+    AdminComponent,
+    ValidatedHospitalComponent,
+    NonValidatedHospitalComponent,
+    SuspendedHospitalComponent,
+    AllServiceComponent
   ],
   imports: [
     BrowserModule,

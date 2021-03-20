@@ -1,0 +1,64 @@
+.hopital {
+    padding: 5.5rem;
+}
+.hopital .first-container{
+    margin-top: 2rem;
+    background-color: #f1f2f2;
+    border-radius: 2px;
+}
+.localisaion-hopital {
+    height: 20rem;
+    width: 90%;
+}
+.hopital .bienvenu {    
+    color: #006674;
+    font-family: 'Montserrat', sans-serif;
+}
+#coordonnees{
+    font-weight: bolder;
+}
+.hopital .welcome-text {
+    color: #006674;
+    font-family: 'Roboto', sans-serif;  
+    font-size: 25px;
+    line-height: 20px;
+}
+.hopital .logo {
+    color: red;
+    font-family: 'Roboto', sans-serif;  
+}
+.hopital .btn-large {
+    display: flex;
+    color: red;
+    border: 2px solid red;
+}
+.hopital .btn-large:hover{
+    border: 2px solid #006674;
+    background-color: #ffffff;
+    color: #006674;
+}
+.hopital p{
+    color: #424345;
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;
+}
+
+.hopital .nom {
+    color: #006674;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 35px;
+}
+.hopital-logo{
+    font-size: 2.5em;
+
+}
+.hopital .adresse{
+    padding-left: 35px;
+}
+.tabs a{
+    color: #006674;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    text-transform: none;
+}
+
