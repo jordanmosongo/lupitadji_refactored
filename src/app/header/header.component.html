@@ -1,15 +1,20 @@
-<nav class="navigation" role="navigation">
+<nav class="navigation" [ngClass] = "{connected : connectedState == true}"
+role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="#" class="brand-logo">
+      <a id="logo-container" class="brand-logo">
         lupitadji
       </a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#" class="link">Acceuil</a></li>
-        <li><a href="#" class="link">Services</a></li>
-        <li><a href="#" class="link">Géo-localisation</a></li>
-        <li><a href="#" class="link">Faq</a></li>
-        <li><a href="#" class="link">Contact</a></li>
-        <li><a href="#login" class="btn-large modal-trigger" id="log-in" ><i class="material-icons">perm_identity</i>log in</a></li>
+      <ul class="right hide-on-med-and-down first" *ngIf = "connectedState == false">
+        <li><a href="" class="link">Acceuil</a></li>
+        <li><a href="#service-dispo" class="link">Services</a></li>
+        <li><a href="#localisation" class="link">Géo-localisation</a></li>
+        <li><a href="#faq" class="link">Faq</a></li>
+        <li><a href="#contact" class="link">Contact</a></li>
+        <li><a href="#login" class="btn-large modal-trigger" id="log-in" ><i class="material-icons">perm_identity</i>Connexion</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down second" *ngIf = "connectedState == true">
+        <li><a href="#contact" class="link"> <i class="material-icons left">perm_identity</i>mon compte</a></li>
+        <li><a href="#logout" class="btn-large modal-trigger" id="log-out">Déconnexion</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Acceuil</a></li>
@@ -27,13 +32,13 @@
       <h2>Votre espace hôpital
           <a class="modal-close right"><i class="material-icons">close</i></a>
       </h2>
-      <form [formGroup] = "loginForm">
+      <form [formGroup] = "loginForm" (ngSubmit) = "onLogin()">
         <div class="input-field">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" formControlName = "email" name="email">
             <label for="email">Email</label>
         </div>        
         <div class="input-field">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" formControlName = "password" name="password">
           <label for="password">Password</label>
         </div>
         <div class="input-field">
@@ -53,27 +58,35 @@
       </h2>
       <form [formGroup] = "signupForm" (ngSubmit) = "onCreate()">
         <div class="input-field">
-          <input id="matricule" type="text" class="validate" formControlName = "matricule">
+          <input id="matricule" type="text" class="validate" formControlName = "matricule" name="matricule">
           <label for="matricule">Matricule de l'hôpital</label>
         </div> 
         <div class="input-field">
-          <input id="nom" type="text" class="validate" formControlName = "nom">
+          <input id="nom" type="text" class="validate" formControlName = "nom" name="nom">
           <label for="nom">Nom de l'hôpital</label>
         </div>
         <div class="input-field">
-          <input id="email" type="email" class="validate" formControlName="email"> 
+          <input id="email" type="email" class="validate" formControlName="email" name="email"> 
             <label for="email">Email</label>
         </div>        
         <div class="input-field">
-          <input id="password" type="password" class="validate" formControlName = "password">
+          <input id="password" type="password" class="validate" formControlName = "password" name="password">
           <label for="password">Mot de passe</label>
         </div>
         <div class="input-field">
-          <input id="confirmpassword" type="password" class="validate" formControlName = "confirmPassword">
+          <input id="confirmpassword" type="password" class="validate" formControlName = "confirmPassword" name="confirmPassword">
           <label for="confirmpassword">Confirmer le mot de passe</label>
         </div>
         <button class="btn-large">Créer</button>
       </form>
      
   </div> 
+</div>
+<!--Modal pour déconnexion-->
+<div class="modal" id="logout">
+  <div class="modal-content">
+    <p>Voulez-vous vous déconnecter ?</p>
+    <button class="btn-large" (click) = "onLogout()">Oui</button>
+    <button class="btn-large modal-close">Non</button>
+  </div>
 </div>

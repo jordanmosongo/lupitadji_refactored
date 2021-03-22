@@ -20,12 +20,12 @@
     </div>
     <div class="col s12 l6 offset-12">
         <ul class="tabs">
-            <li class="tab col s6"><a routerLink="/profil">Profil</a></li>
-            <li class="tab col s6"><a routerLink="/services">Service</a></li>
-            <li class="tab col s6"><a routerLink="/account-news">A propos de mon compte</a></li>
+            <li class="tab col s6"><a routerLink="/hopital/profil">Profil</a></li>
+            <li class="tab col s6"><a routerLink="/hopital/services">Service</a></li>
+            <li class="tab col s6"><a routerLink="/hopital/account-news">A propos de mon compte</a></li>
         </ul>
         <div class="col s12">
-            <app-services></app-services>
+            <router-outlet></router-outlet>
         </div>  
             
     </div>

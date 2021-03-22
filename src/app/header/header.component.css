@@ -3,7 +3,14 @@
     background-color: #ffffff;  
     position: fixed;  
     z-index: 1;
-  }
+}
+.connected{
+    background-color: #006674;  
+    transition: 1.5s ease-in;
+}
+.connected-text{
+    color: #ffffff;
+}
 .container{
     width: 60%;
 }
@@ -18,17 +25,20 @@
     position: relative;
     top: .8rem;
 }
-.right{
+.first, .second{
     padding-top: 15px;
 }
-.right .link{
-    color: #006674;
+.first .link, .second .link{
+   
     text-transform: uppercase;
     text-decoration: none; 
     font-size: 16px;
     position: relative;  
 }
-.right .link::after{
+.first .link{
+    color: #006674;
+}
+.first .link::after{
     content: '';
     width: 0;
     border-bottom: 4px solid #e80041;
@@ -41,20 +51,23 @@
 .right .link:hover{
     background-color: inherit;
 }
-.right a:hover::after{
+.first a:hover::after{
     
     width: 75%;
 }
-#log-in{
+#log-in, #log-out{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     background-color: #006674;
     color: white;
     margin-right: 20px;
-    display: flex;
-    
+    display: flex;    
     align-items: center;
     justify-content: center;
+}
+#log-out{
+    box-shadow: #006674 13px;
+    margin-top: 3.5px;
 }
 #log-in:hover{
     border: 2px solid#006674;

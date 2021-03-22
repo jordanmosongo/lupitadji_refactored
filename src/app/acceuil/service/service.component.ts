@@ -11,8 +11,8 @@ export class ServiceComponent implements OnInit {
   image_maternite = "assets/images-appli/maternite.jpg";
   services : Service[] = [
     new Service('assets/images-appli/maternite-congo.jpg', 'Maternité'),
-    new Service('assets/images-appli/maternite-congo.jpg', 'Radiologie'),
-    new Service('assets/images-appli/maternite-congo.jpg', 'Ophtalmologie')
+    new Service('assets/images-appli/machine-ophtalmology.jpg', 'Ophtalmologie'),
+    new Service('assets/images-appli/maxresdefault.jpg', 'Gynécologie'),
   ];
   constructor() { }
 

@@ -23,6 +23,7 @@ import { ValidatedHospitalComponent } from './admin/validated-hospital/validated
 import { NonValidatedHospitalComponent } from './admin/non-validated-hospital/non-validated-hospital.component';
 import { SuspendedHospitalComponent } from './admin/suspended-hospital/suspended-hospital.component';
 import { AllServiceComponent } from './admin/all-service/all-service.component';
+import { AccountComponent } from './hopital/account/account.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AllServiceComponent } from './admin/all-service/all-service.component';
     ValidatedHospitalComponent,
     NonValidatedHospitalComponent,
     SuspendedHospitalComponent,
-    AllServiceComponent
+    AllServiceComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
