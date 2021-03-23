@@ -1,0 +1,71 @@
+table{
+    display: flex;
+    flex-direction: column;
+ }
+ .ligne {
+     margin-top: 15px;
+     color: #006674;
+     font-family: "Roboto", sans-serif;
+     font-size: 20px;
+     cursor: pointer;
+     padding:0 20px;
+     position: relative;
+ }
+ .ligne .action{
+     position: absolute;
+     right: 30px;
+     top: 15px;
+     display: flex;
+     align-items: center;
+     padding: 0 10px;
+ }
+ .action li{
+     margin: 0 5px;
+ }
+ .btn-add{
+     background-color: #006674;
+     color: #ffffff;
+     font-family: "Roboto", sans-serif;
+     font-size: 16px;
+     margin-top: 20px;
+     display: flex;
+     width: 10em;
+ }
+ .btn-add:hover{
+     background-color: #ffffff;
+     color: #006674;
+     border: 2px solid #006674;
+ }
+ .description{
+     color: #424345;
+ }
+ .action .edit{
+     color:#006674;
+ }
+ .action .delete{
+     color:#e80041;
+ }
+ .modal{
+    width: 40%;
+    padding: 10px;
+ }
+ .modal .fermer{
+   float: right;
+ }
+ .modal h4{
+     color: #006674;
+     font-family: "Roboto", sans-serif;
+ }
+ .modal .btn-large{
+     background-color: #ffffff;
+     color: #e80041;
+     border: 2px solid #e80041;
+ }
+ .modal .btn-large:hover{
+     background-color: #e80041;
+     color: #ffffff;
+ }
+ 
+ 
+ 
+ 

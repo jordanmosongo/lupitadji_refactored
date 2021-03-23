@@ -1,1 +1,9 @@
-<p>suspended-hospital works!</p>
+<table *ngFor="let hopital of hopitaux; let i = index">
+    <tr class="ligne z-depth-1">
+        <td>{{hopital.nom}} 
+            <ul class="action">
+                <li><a href="#ajout-service" class="modal-trigger">view</a></li>
+            </ul>
+        </td>        
+    </tr>      
+</table>

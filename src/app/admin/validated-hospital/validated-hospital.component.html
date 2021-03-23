@@ -1,5 +1,23 @@
-<table>
+<table *ngFor="let hopital of hopitaux; let i = index">
     <tr class="ligne z-depth-1">
-        <td>Hopital 1 </td>        
+        <td>{{hopital.nom}} 
+            <ul class="action">
+                <li><a href="#validated-modal" class="modal-trigger">view</a></li>
+            </ul>
+        </td>        
     </tr>      
 </table>
+
+<div class="modal" id="validated-modal">
+    <div class="modal-content">
+        <div class="row">
+            <h2>Nom de l'hôpital</h2>
+            <div class="col s12 m6">
+                <h4>Identité de l'hôpital</h4>
+            </div>
+            <div class="col s12 m6">
+                <h4>Note administrative</h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,25 +2,29 @@
     <div class="row first-container z-depth-1">
         <div class="col m12 l12 s12 welcome">
             <div class="row valign-wrapper">
-                <div class="col m3 S3 l3 adresse">
-                    <h2 class="center-align logo">Logo Admin</h2>
+                <div class="col m2 S2 l2 adresse">
+                    <h2 class="center-align logo">
+                       <i class="material-icons">admin_panel_settings</i>
+                    </h2>
                 </div>
-                <div class="col m9 S9 l9 adresse">
-                    <h2 class="nom">Administrateur</h2>
-                    <p>Vous vous êtes connectés en tant qu'administrateur et vous pouvez gérer 
-                        la plateforme </p>                   
+                <div class="col m10 S10 l10 adresse">
+                    <h2 class="nom">Compte administrateur</h2>                               
                 </div>
             </div> 
         </div>
     </div>
     <div class="col s12 l6 offset-12">
         <ul class="tabs">
-            <li class="tab col s6"><a href="profil">Hôpitaux validés</a></li>
-            <li class="tab col s6"><a href="profil">Hôpitaux non validés</a></li>
-            <li class="tab col s6"><a href="profil">Hôpitaux suspendus</a></li>
-            <li class="tab col s6"><a href="services">Services non validés</a></li>
+            <li class="tab col s6"><a routerLink="/admin/non-validated">Non validés</a></li>
+            <li class="tab col s6"><a routerLink="/admin/validated">Validés</a></li>
+            <li class="tab col s6"><a routerLink="/admin/suspended">Suspendus</a></li>
+            <li class="tab col s6"><a routerLink="/admin/all-service">Services</a></li>
         </ul>
-        <app-validated-hospital></app-validated-hospital>
+        <div class="col s12">
+            <router-outlet></router-outlet>
+        </div>  
+            
     </div>
 </section>
+
 

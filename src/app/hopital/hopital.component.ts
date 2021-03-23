@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../frontservices/service.service';
+declare var $ : any;
 @Component({
   selector: 'app-hopital',
   templateUrl: './hopital.component.html',
@@ -11,7 +12,7 @@ export class HopitalComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  
+    $('.tabs').tabs();
   }
 
 }
