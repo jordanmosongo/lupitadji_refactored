@@ -9,9 +9,7 @@ import { Hopital } from 'src/app/models/hopital';
 export class SuspendedHospitalComponent implements OnInit {
 
   hopitaux : Hopital[] = [
-    new Hopital('monkole', 'OO1/AB'),
-    new Hopital('Hj Hospital', 'OO1/AB'),
-    new Hopital('Cinquantenaire', 'OO1/AB')
+  
   ]
   constructor() { }
 

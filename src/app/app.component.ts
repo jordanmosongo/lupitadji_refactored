@@ -9,7 +9,6 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit{
   title = 'lupitadji';
   ngOnInit(){
-    AOS.init();
-  
+    AOS.init();  
   }
 }

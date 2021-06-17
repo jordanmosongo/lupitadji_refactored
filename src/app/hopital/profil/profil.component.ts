@@ -19,7 +19,9 @@ export class ProfilComponent implements OnInit {
   ngOnInit(): void {
     this.identiteForm = new FormGroup({
       'nom' : new FormControl("Akram", Validators.required),
-      'matricule' : new FormControl("001/AB", Validators.required),      
+      'matricule' : new FormControl("001/AB", Validators.required),  
+      'description' : new FormControl(null, Validators.required),  
+      'logo' : new FormControl(null)  
     });
     this.adresseForm = new FormGroup({
       'avenue' : new FormControl("Basoko", Validators.required),
@@ -32,7 +34,7 @@ export class ProfilComponent implements OnInit {
       'email' : new FormControl("hopital@hmail.com"),
       'whatsapp' : new FormControl('089 67 89 009'),
       'facebook' : new FormControl("lien facebook"),
-      'linkedin' : new FormControl('Lien linkedIn')
+      'siteWeb' : new FormControl('Lien linkedIn')
     });
   }
 

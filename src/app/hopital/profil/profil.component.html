@@ -11,6 +11,14 @@
                     <label for="matricule">Matricule</label>
                     <input type="text" class="form-control" formControlName = "matricule">
                 </div>
+                <div class="form-group">
+                    <label for="matricule">Description</label>
+                    <input type="text" class="form-control" formControlName = "description">
+                </div>
+                <div class="form-group">
+                    <label for="matricule">Logo</label>
+                    <input type="file" class="form-control" formControlName = "logo">
+                </div>
                 <button class="btn-large" type="submit">Mettre à jour</button>
             </form>
         </div>
@@ -37,7 +45,7 @@
                     <input type="text" class="form-control" id="commune" 
                     name="commune" formControlName = "commune">
                 </div>
-                <button class="btn-large">Mise à jour</button>
+                <button class="btn-large">Mettre à jour</button>
             </form>
         </div>
     </div>
@@ -66,16 +74,12 @@
                     formControlName = "facebook" id="facebook" name="facebook">
                 </div>
                 <div class="form-group">
-                    <label for="linkedin">LinkedIn</label>
-                    <input type="text" class="form-control" 
-                    formControlName = "linkedin" id="linkedin" name="linkedin">
+                    <label for="siteWeb">Site web</label>
+                    <input type="url" class="form-control" 
+                    formControlName = "siteWeb" id="siteWeb" name="siteWeb">
                 </div>
-                <button class="btn-large" type="submit">Mise à jour</button>
+                <button class="btn-large" type="submit">Mettre à jour</button>
             </form>
-        </div>
-        <div class="col s12 m6 l6">
-            <h4>Votre position sur map</h4>
-            <div id="mapid"></div>
         </div>
     </div>
 

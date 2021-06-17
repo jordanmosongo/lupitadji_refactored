@@ -6,8 +6,8 @@
             <hr>
             <span class="description">Un texte descriptif du service</span>
             <ul class="action">
-                <li><a href="#ajout-service" class="modal-trigger"><i class="material-icons edit hoverable">edit</i></a></li>
-                <li><a href="#confirmation" class="modal-trigger"><i class="material-icons delete hoverable">delete</i></a></li>
+                <li><a href="#ajout-service" class="modal-trigger" title="Modifier le service" (click) = "onUpdate()"><i class="material-icons edit hoverable">edit</i></a></li>
+                <li><a href="#confirmation" class="modal-trigger" title="supprimer le service"><i class="material-icons delete hoverable">delete</i></a></li>
             </ul>
         </td>        
     </tr>      
@@ -17,11 +17,15 @@
 <div id="ajout-service" class="modal">
     <div class="modal-content">
         <h4 *ngIf="editing == false">Ajouter un service 
-            <a class="modal-close waves-effect waves-red btn-flat fermer">
+            <a class="modal-close fermer" (click) = "onClose()">
                 <i class="material-icons">close</i>
             </a>
         </h4>
-        <h4 *ngIf="editing == true">Mise à jour</h4>
+        <h4 *ngIf="editing == true">Mettre à jour
+            <a class="modal-close fermer" (click) = "onClose()">
+                <i class="material-icons">close</i>
+            </a>
+        </h4>
         <form [formGroup] = "serviceForm" (ngSubmit) = "onSend()">
             <div class="form-group">
                 <div class="form-control">
@@ -34,18 +38,20 @@
                     placeholder="Veuillez donner une briève description">
                 </div>
             </div>
-            <button class="btn-large" type="submit">Ajouter</button>
+            <button class="waves-effect btn-large" type="submit" id="add-update">
+                <span *ngIf = "editing == false">Ajouter</span>
+                <span *ngIf = "editing == true">Modifier</span>
+            </button>
         </form>
-    </div>
-  
+    </div>  
 </div>
 <!-- Modal de demande de confirmation pour supprimer un service -->
 <div id="confirmation" class="modal">
     <div class="modal-content">
-        <h4>Etes-vous sûr de vouloir supprimer ce service ?</h4>
+        <p>Etes-vous sûr de vouloir supprimer ce service ?</p>
     </div>
-    <div class="modal-footer">
-        <a class="modal-close waves-effect btn-flat">Oui</a>
-        <a class="modal-close waves-effect btn-flat">Non</a>
+    <div class="modal-footer right">
+        <button class="waves-effect btn-large">Oui</button>
+        <button class="waves-effect btn-large modal-close">Non</button>
     </div>
 </div>

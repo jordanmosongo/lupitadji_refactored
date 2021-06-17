@@ -1,31 +1,23 @@
-.illustration{
-    height: 35rem;
-    background-color: #d92950;
-    color: white;
-    text-align: center;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+.illustration {
+  height: 35rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #d92950;
+  color: #fff;
 }
-.illustration h1{
-    font-family: 'Oswald', sans-serif;
-    margin-bottom: 1em;
-    color: #ffffffde;
+.illustration h1 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1em;
 }
-.illustration i{
-    font-size: 6rem;
-    color: #ffffffde;
+.illustration i {
+  font-size: 50px;
 }
-.illustration p{
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    color: #ffffffde;
+.illustration p {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
 }
-.illustration .col{
-    margin-bottom: 1em;
+.illustration .col {
+  margin-bottom: 1em;
 }
-
-

@@ -1,68 +1,65 @@
-.service{
-    height: 45rem;
+section {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.service .row{
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    text-align: center;
+h2 {
+  color: #006674;
+  font-family: "Oswald", sans-serif;
 }
-.service .col{
-    margin-bottom: 20px;
-    justify-content: center;
-    display: flex; 
-    flex-wrap: wrap;
+.services {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
 }
-.service h2{
-    color: #006674;
-    font-family: "Oswald", sans-serif;
-    margin-bottom: 1em;
+.service {
+  position: relative;
+  width: 24%;
+  margin: 0.5%;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
 .service-dispo {
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-    width: 100%;
-    height: 270px;
-    margin: 5px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 1px 1px 3px #333333;
-    cursor: pointer;   
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 270px;
+  margin: 5px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 1px 3px #333333;
+  cursor: pointer;
 }
-
 .service-dispo:hover {
-    transform: scale(1.03);
-    transform: translate(2);
+  transform: scale(1.03);
+  transform: translate(2);
 }
 .service-info {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(202, 76, 72, 0.856);
-    color: white;
-    padding: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #d92950;
+  opacity: 0.87;
 }
 .service-info h3 {
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-}
-
-
-
-
-#service{
-    width: 70%;
-}
-.paging {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-    
-}
-.paging .pagination {
-  display: inline;
-  margin: 10px;
+  color: #fff;
   font-family: "Roboto", sans-serif;
-  background-color:#ffffff ;
-  color: red;
-} 
+  font-size: 35px;
+  margin: 15px 0;
+  text-align: center;
+}
+.btn-large {
+  text-transform: uppercase;
+  background-color: #006674;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}

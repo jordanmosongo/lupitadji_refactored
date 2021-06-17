@@ -1,7 +1,9 @@
 import { state, style, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormControlDirective, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../backservices/auth.service';
+import { CompteService } from '../backservices/compte.service';
 import { ServiceService } from '../frontservices/service.service';
 declare var $ : any;
 declare var M : any;
@@ -26,12 +28,15 @@ export class HeaderComponent implements OnInit {
   logo = "assets/images-appli/health.png";
   loginForm : any;
   signupForm : any;
+  searchForm : any;
   connectedState = false;
   connectedLook = 'not-connected';
 
   constructor(private router : Router,
               private route : ActivatedRoute,
-              private serviceService : ServiceService
+              private serviceService : ServiceService,
+              private compteService : CompteService,
+              private authService : AuthService
               ) { 
       if(this.serviceService) {
         this.serviceService.connectedState.subscribe(
@@ -57,8 +62,10 @@ export class HeaderComponent implements OnInit {
       'email' : new FormControl(null, Validators.required),
       'password' : new FormControl(null, Validators.required),
       'confirmPassword' : new FormControl(null, Validators.required)
-    })
-
+    });
+    this.searchForm = new FormGroup({
+      'searchInput' : new FormControl(null, Validators.required)
+    });
   }
 
   create(){
@@ -67,7 +74,15 @@ export class HeaderComponent implements OnInit {
 
   onCreate(){
     console.log(this.signupForm.value);
-    this.closeModal();
+    this.compteService.saveCompte(this.signupForm.value).subscribe(
+      (result : any) => {
+        console.log(result);
+      },
+      (error : any) => {
+        console.log(error);
+      }
+    )
+    //this.closeModal();
   }
 
   withModal(){
@@ -87,15 +102,14 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogin(){
-    if(this.loginForm.get('email').value == 'hopital@gmail.com' 
-      && this.loginForm.get('password').value == '1234') {
-        location.replace('/hopital');
-    }else if(this.loginForm.get('email').value == 'admin@gmail.com' &&
-            this.loginForm.get('password').value == '0000') {
-            location.replace('/admin');        
-    } else {
-      alert("L'email ou le password est incorrect");
-    }
+    
+   this.authService.login(this.loginForm.value).subscribe(
+     (result : any) => {
+        console.log(result);
+        location.replace("/hopital");
+     },
+     (error : any) => console.log(error)
+   )
   }
 
   onLogout(){

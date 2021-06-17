@@ -1,5 +1,4 @@
-<nav class="navigation" [ngClass] = "{connected : connectedState == true}"
-role="navigation">
+<nav class="navigation" [ngClass] = "{connected : connectedState == true}">
     <div class="nav-wrapper">
       <a id="logo-container" class="brand-logo">
         lupitadji
@@ -86,7 +85,10 @@ role="navigation">
 <div class="modal" id="logout">
   <div class="modal-content">
     <p>Voulez-vous vous déconnecter ?</p>
-    <button class="btn-large" (click) = "onLogout()">Oui</button>
-    <button class="btn-large modal-close">Non</button>
+    <div class="right btn-group">
+      <button class="waves-effect btn-large" (click) = "onLogout()">Oui</button>
+      <button class="waves-effect btn-large modal-close">Non</button>     
+    </div>
+    
   </div>
 </div>

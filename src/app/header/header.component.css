@@ -1,110 +1,140 @@
 .navigation {
-    height: 5.5rem;
-    background-color: #ffffff;  
-    position: fixed;  
-    z-index: 1;
+  height: 5.5rem;
+  top: 0;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1;
 }
-.connected{
-    background-color: #006674;  
-    transition: 1.5s ease-in;
+.connected {
+  background-color: #006674;
+  transition: 1.5s ease-in;
 }
-.connected-text{
-    color: #ffffff;
+.connected-text {
+  color: #ffffff;
 }
-.container{
-    width: 60%;
+.container {
+  width: 60%;
 }
-#logo-container{
-    color: #e80041;
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    padding-left: 20px;
+#logo-container {
+  color: #e80041;
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  padding-left: 20px;
 }
-.navigation img{
-    width: 40%;
-    position: relative;
-    top: .8rem;
+.navigation img {
+  width: 40%;
+  position: relative;
+  top: 0.8rem;
 }
-.first, .second{
-    padding-top: 15px;
+.first,
+.second {
+  padding-top: 15px;
 }
-.first .link, .second .link{
-   
-    text-transform: uppercase;
-    text-decoration: none; 
-    font-size: 16px;
-    position: relative;  
+.first .link,
+.second .link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
 }
-.first .link{
-    color: #006674;
+.first .link {
+  color: #006674;
 }
-.first .link::after{
-    content: '';
-    width: 0;
-    border-bottom: 4px solid #e80041;
-    height: 10px;
-    position: absolute;
-    left: 10%;
-    bottom: 0;
-    transition: width .3s ease;
+.first .link::after {
+  content: "";
+  width: 0;
+  border-bottom: 4px solid #e80041;
+  height: 10px;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  transition: width 0.3s ease;
 }
-.right .link:hover{
-    background-color: inherit;
+.right .link:hover {
+  background-color: inherit;
 }
-.first a:hover::after{
-    
-    width: 75%;
+.first a:hover::after {
+  width: 75%;
 }
-#log-in, #log-out{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    background-color: #006674;
-    color: white;
-    margin-right: 20px;
-    display: flex;    
-    align-items: center;
-    justify-content: center;
+#log-in,
+#log-out {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #006674;
+  color: white;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#log-out{
-    box-shadow: #006674 13px;
-    margin-top: 3.5px;
+#log-out {
+  box-shadow: #006674 13px;
+  margin-top: 3.5px;
 }
-#log-in:hover{
-    border: 2px solid#006674;
-    color: #006674;
-    background-color: #ffffff;
+#log-in:hover {
+  border: 2px solid#006674;
+  color: #006674;
+  background-color: #ffffff;
 }
 .modal {
-    width: 40%;
-    padding: 20px;
+  width: 40%;
+  padding: 20px;
 }
-.modal .row{
-    padding: 20px;
+.modal .row {
+  padding: 20px;
 }
-.modal h2{
-    margin-bottom: 30px;
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-    color: #006674;
+.modal h2 {
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  color: #006674;
 }
-.modal .modal-close{
-    color: #e80041;
-    font-size: 20px;
+.modal .modal-close {
+  color: #e80041;
+  font-size: 20px;
 }
-.modal a{
-    color: #006674;
-    cursor: pointer;
+.modal a {
+  color: #006674;
+  cursor: pointer;
 }
-.modal a:hover{
-    text-decoration: underline;
+.modal a:hover {
+  text-decoration: underline;
 }
-.modal .btn-large{
-    background-color: #ffffff;
-    color: #e80041;
-    border: 2px solid #e80041;
-    font-family: "Roboto", sans-serif;
+.modal .btn-large {
+  background-color: #ffffff;
+  color: #006674;
+  border: 2px solid #006674;
+  font-family: "Roboto", sans-serif;
 }
-.modal .btn-large:hover{
-    background-color: #e80041;
-    color: #ffffff;
+.modal .btn-large:hover {
+  background-color: #006674;
+  color: #ffffff;
+}
+.modal .btn-large {
+  margin: auto;
+}
+#logout p {
+  color: #006674;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+}
+.btn-group .btn-large {
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+.form-search {
+  width: 30%;
+  display: flex;
+}
+.btn-search {
+  padding: 0 30px;
+}
+#searchInput {
+  border: 2px solid #d92950;
+  height: 3.35rem;
+  padding: 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #006674;
 }

@@ -24,6 +24,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.withModal();
+    
    if(this.editing == false) {
     this.serviceForm = new FormGroup({
       'nom' : new FormControl(null, Validators.required),
@@ -48,5 +49,12 @@ export class ServicesComponent implements OnInit {
     var instances = M.Modal.init(elems, {
       dismissible : false
     });
+  }
+  onClose(){
+    this.serviceForm.reset();
+    this.editing = false;
+  }
+  onUpdate(){
+    this.editing = true;
   }
 }

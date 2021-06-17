@@ -1,21 +1,12 @@
-<section class="container banner valign-wrapper">
-    <div class="row">
-        <div class="col s12 m8 l8" id="commentaire" 
-        data-aos-easing="ease-in-out" data-aos="fade-right" data-aos-duration="1200">
-            <h1 >Optimisez votre <br> accès aux hôpitaux</h1>
-            <p >
-               Nous vous offrons un service qui optimise vos besoins sanitaires. <br>
-               Et cela sans que vous ayez à payer le moindre frais!
-            </p>
-            <a class="btn-large modal-trigger" [ngClass] = "{'pulse' : hoverState == true}" 
-            data-aos="fade-up" data-aos-duration="1200" href="#more"
-            (mouseover) = "onHover()" (mouseleave) = "onLeave()">En savoir plus</a>
-        </div>
-        <div class="col m4 l4 hide-on-med-and-down valign-wrapper" 
-            id="image-banner" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
-            <img src="{{image_barner}}" alt="logo d'image de la bannière">
-        </div>
-    </div>
+<section>    
+    <div class="banner">
+        <div class="banner__overlay"></div>
+        <h1 class="banner__title" >Lupitadji</h1>               
+        <p class="banner__text"> 
+            Optimisez votre accès aux hôpitaux <br/> ainsi que la recherche des services hodspitaliers
+        </p>
+        <a class="btn-large modal-trigger " href="#more">En savoir plus</a>
+    </div>   
 </section>
 <div id="more" class="modal">
     <div class="modal-content">
